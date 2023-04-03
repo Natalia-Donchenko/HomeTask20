@@ -1,0 +1,176 @@
+body {
+  background-color: rgb(169, 175, 179);
+
+  .container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 520px;
+    text-align: center;
+
+    color: white;
+
+    background-color: rgb(60, 63, 65);
+    border-radius: 12px;
+    
+    .total-title {
+      color: rgb(33, 180, 168);
+      font-size: 34px;
+      text-transform: uppercase;
+    }
+
+    .addTask {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      
+     
+      &-btn {
+        color: rgb(60, 63, 65);
+        font-weight: bold;
+
+        background-color: rgb(33, 180, 168);
+        border: none;
+        border-radius: 12px;
+        
+        transition: all 0.3s linear;
+        
+        &:hover {
+          background-color:rgb(38, 206, 192);
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .list-wrapper {
+      display: flex;
+      margin-bottom: 10px;
+      padding: 5px 0;
+      justify-content: space-between;
+      
+      color: rgb(169, 175, 179);
+      font-size: 20px;
+      
+      border-bottom: 1px solid rgb(33, 180, 168);
+      
+      .list {
+        display: flex;
+        
+        .checkbox {
+          margin-right: 10px;
+        }
+      }
+
+      .list-number {
+        display: flex;
+        align-items: center;
+
+        color: rgb(33, 180, 168);
+      }
+
+      .list-task{
+        display: flex;
+        margin-left: 10px;
+        width: 330px;
+        text-align: left;
+
+        word-break: break-all;
+        word-wrap: wrap;
+      }
+
+      .active {
+        display: flex;
+      }
+
+      .done {
+        display: flex;
+
+        text-decoration: line-through;
+        opacity: 0.3;
+      }
+    }
+
+    .task-input {
+      padding: 5px 10px;
+      width: 400px;
+      min-height: 30px;
+      text-align: center;
+
+      color: rgb(169, 175, 179);
+      font-size: 20px;
+
+      background-color: transparent;
+      border-radius: 12px;
+      outline: none;
+    }
+
+    .list-buttons {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      
+      .optional-btn {
+        min-width: 50px;
+
+        background-color: rgb(33, 180, 168);
+        border: none;
+        border-radius: 12px;
+        
+        color: rgb(60, 63, 65);
+        font-weight: bold;
+
+        transition: all 0.5s linear;
+        
+        &:hover {
+          background-color:rgb(38, 206, 192);
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .editing {
+      display: flex;
+      gap:20px;
+      margin-bottom: 20px;
+    
+      .list-buttons {
+        flex-direction: column;
+      }
+    }
+
+    .counter {
+      color: rgb(33, 180, 168);
+    }
+
+    .progressBar {
+      display: flex;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 100px;
+      
+      background-color: rgba(33, 180, 168, 0.247);
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      .progressInput {
+        display: flex;
+        padding: 5px;
+        width: 100%;
+
+        background-color: rgba(33, 180, 168, 0.651);
+        border-radius: 8px;
+
+        transition:  width 0.5s ease-in-out;
+        
+        .progressDone {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
