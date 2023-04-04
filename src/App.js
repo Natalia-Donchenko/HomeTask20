@@ -10,13 +10,14 @@ function App() {
   const [editingTask, setEditingTask] = useState('');
   const [progress, setProgress] = useState(0)
  
-
+console.log(toDoList)
   const addTask = () => {
     if (task) {
-      let num = toDoList.length + 1;
-      let newTask = { id: num, title: task, status: false};
+      let num = (toDoList.length + 1).toString();
+      let newTask = ({ id: num, title: task, status: false});
+
       setToDoList([...toDoList, newTask]);
-      setTask('');
+      setTask(''); 
     }
   }
 
@@ -43,16 +44,14 @@ function App() {
   const deleteTask = (id) => {
     let tasks = toDoList.filter(task => task.id !== id)
 
-    console.log(progress)
-    
     tasks.forEach(task => {
+
       if(progress > 0 && task) {
         setProgress(progress - 1);
-      }
+      } 
     })
     
     setToDoList(tasks);
-    console.log(tasks);
     setEditingTask('');
   }
 

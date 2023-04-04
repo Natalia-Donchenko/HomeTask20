@@ -8,7 +8,6 @@ const ToDoList = ({ toDoList, markDone, setEditingTask, deleteTask }) => {
             <div 
               className="list-wrapper"
               key={task.id}
-
             >
               <div className="list">
                 <input
